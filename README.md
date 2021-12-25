@@ -64,3 +64,16 @@ docker build -t ros/orb-slam2 -f Dockerfile .
 cd ~/cv2021-vslam-workshop
 ./run_docker
 ```
+
+## ORB_SLAM2 and Basler camera
+
+### Basler (previous workshop)
+[Optional] edit camera config: `~/basler_lab_ws/src/pylon-ros-camera/pylon_camera/config/default.yaml`
+
+Start streaming images from camera:
+```shell
+cd ~/basler_lab_ws
+source devel/setup.bash
+roslaunch pylon_camera pylon_camera_node.launch
+```
+
