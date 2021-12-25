@@ -2,6 +2,11 @@
 
 ## Getting Started
 
+Clone this repo:
+```shell
+git clone https://github.com/ramsafin/cv2021-vslam-workshop.git
+```
+
 ### Install Docker
 
 ```shell
@@ -32,4 +37,25 @@ su - ${USER}
 Run Docker's hello world:
 ```shell
 docker run hello-world
+```
+
+### Prepare and run Docker image
+
+Check X11 config:
+```shell
+sudo apt install xauth
+
+xauth list
+echo $DISPLAY
+```
+
+Load Docker image from `*.tar` file:
+```shell
+docker load -i <path to image tar file>
+```
+or build it from source:
+
+```shell
+cd ~/cv2021-vslam-workshop
+docker build -t ros/orb-slam2 -f Dockerfile .
 ```
