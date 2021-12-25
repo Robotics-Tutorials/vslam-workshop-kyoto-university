@@ -39,7 +39,7 @@ Run Docker's hello world:
 docker run hello-world
 ```
 
-### Prepare and run Docker image
+### Prepare a Docker image
 
 Check X11 config:
 ```shell
@@ -58,4 +58,9 @@ or build it from source:
 ```shell
 cd ~/cv2021-vslam-workshop
 docker build -t ros/orb-slam2 -f Dockerfile .
+```
+### Run the Docker image
+```shell
+cd ~/cv2021-vslam-workshop
+./run_docker
 ```
