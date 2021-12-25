@@ -13,4 +13,4 @@ docker run -it --privileged --name ros-kinetic-orb-slam2 --net=host \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
         --group-add video \
         --device=/dev/dri:/dev/dri \
-	lirs/ros-kinetic-desktop:orb-slam2
+	ros/orb-slam2
