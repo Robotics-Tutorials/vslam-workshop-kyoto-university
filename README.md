@@ -88,3 +88,20 @@ export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:${PWD}/Examples/ROS
 rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/Basler.yaml \
        camera/image_raw:=/pylon_camera_node/image_raw
 ```
+
+### Docker usage
+
+Show launched containers:
+```shell
+docker ps
+```
+
+Kill a container:
+```shell
+docker kill <название контейнера>
+```
+
+Show all images:
+```shell
+docker images
+```
