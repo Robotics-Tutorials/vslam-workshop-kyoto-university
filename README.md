@@ -98,7 +98,7 @@ docker ps
 
 Kill a container:
 ```shell
-docker kill <название контейнера>
+docker kill <container's name>
 ```
 
 Show all images:
