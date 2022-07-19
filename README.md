@@ -2,14 +2,19 @@
 
 ## Getting Started
 
-Clone this repo:
+### Install Docker
+
+Choose your OS and follow the instructions:
+
+- Ubuntu: https://docs.docker.com/desktop/install/ubuntu
+- Mac OS: https://docs.docker.com/desktop/install/mac-install
+- Windows: https://docs.docker.com/desktop/install/windows-install
+
+### Clone this repo
+
 ```shell
 git clone https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university.git
 ```
-
-### Install Docker
-
-Follow the instructions (Docker Desktop): https://docs.docker.com/engine/install
 
 ### Prepare a Docker image
 
