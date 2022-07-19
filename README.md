@@ -7,37 +7,9 @@ Clone this repo:
 git clone https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university.git
 ```
 
-### Install Docker [Update]
+### Install Docker
 
-```shell
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-```
-
-```shell
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(cut -f2 <<< $(lsb_release -c)) stable"
-sudo apt update
-```
-
-```shell
-sudo apt install docker-ce -y
-```
-Check the installation:
-```shell
-sudo systemctl status docker
-```
-
-Setting up permisssions:
-```shell
-sudo usermod -aG docker ${USER}
-su - ${USER}
-```
-
-Run Docker's hello world:
-```shell
-docker run hello-world
-```
+Follow the instructions (Docker Desktop): https://docs.docker.com/engine/install
 
 ### Prepare a Docker image
 
