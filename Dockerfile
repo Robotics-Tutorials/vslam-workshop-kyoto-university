@@ -1,4 +1,4 @@
-FROM osrf/ros:kinetic-desktop
+FROM osrf/ros:kinetic-desktop-full
 
 # Set working directory
 WORKDIR /home
