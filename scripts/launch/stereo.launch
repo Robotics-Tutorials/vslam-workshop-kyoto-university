@@ -1,0 +1,11 @@
+<launch>
+    <arg name="bag_file" default="/home/datasets/V1_01_easy.bag"/>
+    <arg name="vocab" default="/home/ORB_SLAM2/Vocabulary/ORBvoc.txt"/>
+    <arg name="settings" default="/home/ORB_SLAM2/Examples/Stereo/EuRoC.yaml"/>
+
+    <node pkg="ORB_SLAM2" type="Stereo" name="orb_slam2_stereo_node" output="screen"
+          args="$(arg vocab) $(arg settings) true"/>
+
+    <node pkg="rosbag" type="play" name="rosbag_play_image_sequence" output="screen"
+          args="--pause $(arg bag_file) /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw"/>
+</launch>

@@ -22,5 +22,7 @@ COPY ORB_SLAM2 /home/ORB_SLAM2
 RUN /bin/bash -c '. /opt/ros/${ROS_DISTRO}/setup.bash; cd /home/ORB_SLAM2; chmod +x build.sh; ./build.sh'
 RUN /bin/bash -c '. /opt/ros/${ROS_DISTRO}/setup.bash; cd /home/ORB_SLAM2; chmod +x build_ros.sh; ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:${PWD}/Examples/ROS ./build_ros.sh'
 
+COPY --chmod=777 scripts /home/scripts
+
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*
