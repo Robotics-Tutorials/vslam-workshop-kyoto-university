@@ -23,7 +23,7 @@ or download a ZIP archive by clicking "Code" > "Download ZIP".
 ### Prepare Docker image
 
 ```shell
-cd ~/vslam-workshop-kyoto-university
+cd path/to/vslam-workshop-kyoto-university
 chmod +x build_docker.sh
 ./build_docker.sh
 ```
