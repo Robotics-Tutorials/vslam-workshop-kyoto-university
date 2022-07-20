@@ -10,38 +10,40 @@ Choose your OS and follow the instructions:
 - Mac OS: https://docs.docker.com/desktop/install/mac-install
 - Windows: https://docs.docker.com/desktop/install/windows-install
 
+Note: Windows users are encouraged to install [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ja-jp&gl=JP)
+
 ### Clone this repo
 
 ```shell
 git clone https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university.git
 ```
 
-### Prepare a Docker image
+or download a ZIP archive by clicking "Code" > "Download ZIP".
 
-Load Docker image from `*.tar` file:
-```shell
-docker load -i <path to image tar file>
-```
-or build it from source:
+### Prepare Docker image
 
 ```shell
 cd ~/vslam-workshop-kyoto-university
-docker build -t ros/orb-slam3 -f Dockerfile .
+chmod +x build_docker.sh
+./build_docker.sh
 ```
 
-## SLAM
+## Run SLAM
 
-Run the Docker container with ORB_SLAM2:
+Run the Docker container:
 ```shell
-cd ~/vslam-workshop-kyoto-university
+chmod +x run_docker.sh 
 ./run_docker.sh
 ```
 
-Launch ORB_SLAM2 (inside the Docker container):
-```shell
-cd ORB_SLAM2
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:${PWD}/Examples/ROS
+Launch ORB_SLAM2 (inside the container):
 
-rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/Basler.yaml \
-       camera/image_raw:=/pylon_camera_node/image_raw
+Monoculary Visual SLAM (using EuRoC dataset):
+```shell
+./scripts/run_mono_euroc.sh
+```
+
+Stereo Visual SLAM (using EuRoC dataset):
+```shell
+./scripts/run_stereo_euroc.sh
 ```
