@@ -36,8 +36,6 @@ chmod +x run_docker.sh
 ./run_docker.sh
 ```
 
-Launch ORB_SLAM2 (inside the container):
-
 Monoculary Visual SLAM (using EuRoC dataset):
 ```shell
 ./scripts/run_mono_euroc.sh [MH]
