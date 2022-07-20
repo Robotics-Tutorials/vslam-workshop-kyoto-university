@@ -40,10 +40,10 @@ Launch ORB_SLAM2 (inside the container):
 
 Monoculary Visual SLAM (using EuRoC dataset):
 ```shell
-./scripts/run_mono_euroc.sh
+./scripts/run_mono_euroc.sh [MH]
 ```
 
 Stereo Visual SLAM (using EuRoC dataset):
 ```shell
-./scripts/run_stereo_euroc.sh
+./scripts/run_stereo_euroc.sh [MH]
 ```
