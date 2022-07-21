@@ -45,7 +45,7 @@ chmod +x docker/run_docker.sh
 ./docker/run_docker.sh
 ```
 
-THE FOLLOWING INSTRUCTIONS SHOULD BE DONE INSIDE THE CONTAINER!
+**THE FOLLOWING INSTRUCTIONS SHOULD BE DONE INSIDE THE CONTAINER!**
 
 Reindex all the ROS bag files (reason: bag layout changes with ROS distributions):
 ```shell
