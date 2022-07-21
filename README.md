@@ -24,8 +24,8 @@ or download a ZIP archive (click [here](https://github.com/Robotics-Tutorials/vs
 
 ```shell
 cd path/to/vslam-workshop-kyoto-university
-chmod +x build_docker.sh
-./build_docker.sh
+chmod +x docker/build_docker.sh
+./docker/build_docker.sh
 ```
 
 ### 4. Prepare datasets
@@ -41,9 +41,11 @@ After this step there should be 2 files `datasets/MH_01_easy.bag` and  `datasets
 
 Run the Docker container:
 ```shell
-chmod +x run_docker.sh 
-./run_docker.sh
+chmod +x docker/run_docker.sh 
+./docker/run_docker.sh
 ```
+
+THE FOLLOWING INSTRUCTIONS SHOULD BE DONE INSIDE THE CONTAINER!
 
 Reindex all the ROS bag files (reason: bag layout changes with ROS distributions):
 ```shell

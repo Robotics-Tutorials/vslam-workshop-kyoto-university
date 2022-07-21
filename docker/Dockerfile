@@ -16,7 +16,7 @@ RUN cd Pangolin \
     && make -j$(nproc) \
     && make install
 
-# Install ORB-SLAM2 (modified version)
+# # Install ORB-SLAM2 (modified version)
 COPY ORB_SLAM2 /home/ORB_SLAM2
 
 RUN /bin/bash -c '. /opt/ros/${ROS_DISTRO}/setup.bash; cd /home/ORB_SLAM2; chmod +x build.sh; ./build.sh'
