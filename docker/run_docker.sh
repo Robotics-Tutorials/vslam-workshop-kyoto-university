@@ -20,5 +20,6 @@ docker run --rm -it --privileged --net=host \
 	-e QT_X11_NO_MITSHM=1 -e DISPLAY=${DISPLAY} \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 	--volume="${_PWD}/datasets:/home/datasets" \
-  --group-add video \
+	--volume="${_PWD}/ros_workspace:/home/ros_workspace" \
+  	--group-add video \
 	ros/orb-slam2

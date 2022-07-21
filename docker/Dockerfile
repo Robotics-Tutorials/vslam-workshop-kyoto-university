@@ -4,7 +4,8 @@ FROM osrf/ros:kinetic-desktop-full
 WORKDIR /home
 
 RUN apt-get update && apt-get install -qq -y \
-    git nano tree libgl1-mesa-glx libgl1-mesa-dri mesa-utils libgl1-mesa-dev libglew-dev
+    git nano tree build-essential ninja-build \
+    libgl1-mesa-glx libgl1-mesa-dri mesa-utils libgl1-mesa-dev libglew-dev
 
 # Install Pangolin (modified version)
 COPY Pangolin /home/Pangolin
@@ -23,6 +24,3 @@ RUN /bin/bash -c '. /opt/ros/${ROS_DISTRO}/setup.bash; cd /home/ORB_SLAM2; chmod
 RUN /bin/bash -c '. /opt/ros/${ROS_DISTRO}/setup.bash; cd /home/ORB_SLAM2; chmod +x build_ros.sh; ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:${PWD}/Examples/ROS ./build_ros.sh'
 
 COPY --chmod=777 scripts /home/scripts
-
-# Cleanup
-RUN rm -rf /var/lib/apt/lists/*
