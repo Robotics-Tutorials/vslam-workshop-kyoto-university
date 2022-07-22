@@ -6,7 +6,7 @@
 
 Follow the official instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install) to install WSL2 and Ubuntu 20.04 LTS.
 
-**Note**: Windows users are encouraged to install [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ja-jp&gl=JP). You still can use PowerShell, but it does not look that convenient.
+**Note**: Windows users are encouraged to install [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ja-jp&gl=JP). You can still use PowerShell, but it does not that convenient.
 
 The result should look like this: Ubuntu 20.04 in Windows Terminal.
 
