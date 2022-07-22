@@ -10,7 +10,7 @@ fi
 echo "Display: ${DISPLAY}"
 
 echo "Allow all local X11 connections"
-xhost +local:docker
+xhost +local:
 
 _CONTAINER_NAME="ros-orb-slam2"
 _PWD=`echo ${PWD} | sed 's/\/docker//'`
