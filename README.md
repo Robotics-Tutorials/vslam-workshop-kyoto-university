@@ -20,21 +20,14 @@ The result should look like this: Ubuntu 20.04 in Windows Terminal.
 
 Choose your OS and follow the instructions:
 
-- Ubuntu: https://docs.docker.com/desktop/install/ubuntu
-- Mac OS: https://docs.docker.com/desktop/install/mac-install
+- Ubuntu: https://docs.docker.com/engine/install/ubuntu
+- Mac OS: https://docs.docker.com/desktop/install/mac-install [NOT CHECKED]
 - Windows: https://docs.docker.com/desktop/install/windows-install
 
 Go to Docker settings and enable WSL2 backend (ONLY for Windows, see below).
 
 <p align="center">
   <img align="center" src="images/Docker WSL2 backend.png" width="75%">
-</p>
-
-For Ubuntu/Mac OS it might be required to change the "File Sharing" settings (see below).
-Add `/tmp` and click "plus". Do not forget to "Apply & Restart". 
-
-<p align="center">
-  <img align="center" src="images/Docker File Sharing.png" width="75%">
 </p>
 
 ### 2. Configure X Window System
