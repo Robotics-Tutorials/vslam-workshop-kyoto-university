@@ -30,6 +30,13 @@ Go to Docker settings and enable WSL2 backend (ONLY for Windows, see below).
   <img align="center" src="images/Docker WSL2 backend.png" width="75%">
 </p>
 
+For Ubuntu/Mac OS it might be required to change the "File Sharing" settings (see below).
+Add `/tmp` and click "plus". Do not forget to "Apply & Restart". 
+
+<p align="center">
+  <img align="center" src="images/Docker File Sharing.png" width="75%">
+</p>
+
 ### 2. Configure X Window System
 
 X Window System (or X11) is a system for remote graphical interfaces rendering and control.
