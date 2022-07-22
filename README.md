@@ -2,7 +2,25 @@
 
 ## Getting Started
 
-### 0. ONLY FOR WINDOWS USERS - Install Windows Sybsystem for Linux (WSL)
+There are 2 options: Docker or Virtual Box. Virtual Box is the less painfull option.
+
+### Datasets
+
+Datasets can be downloaded [here](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets).
+
+In this workshop we will use [`Vicon Room 1 01`](http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.bag) and [`Machine Hall 01`](http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/V1_01_easy.bag) ROS bag files.
+
+**Note**: I will bring a USB flash drive with ROS bag files.
+
+### 1. Virtual Box
+
+Download and install Virtual Box ([link](https://www.virtualbox.org/wiki/Downloads)).
+
+Use the prepared VM image (download it [here]()).
+
+### 2. Docker
+
+#### 2.1 ONLY FOR WINDOWS USERS - Install Windows Sybsystem for Linux (WSL)
 
 Follow the official instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install) to install WSL2 and Ubuntu 20.04 LTS.
 
@@ -14,7 +32,7 @@ The result should look like this: Ubuntu 20.04 in Windows Terminal.
   <img align="center" src="images/WSL2 Ubuntu 20.04 LTS.png" width="75%">
 </p>
 
-### 1. Install Docker
+#### 2.2 Install Docker
 
 **Note**: Docker helps us to build a virtual environment with all the required dependencies for running our programs. 
 
@@ -30,7 +48,7 @@ Go to Docker settings and enable WSL2 backend (ONLY for Windows, see below).
   <img align="center" src="images/Docker WSL2 backend.png" width="75%">
 </p>
 
-### 2. Configure X Window System
+#### 2.3 Configure X Window System
 
 X Window System (or X11) is a system for remote graphical interfaces rendering and control.
 
@@ -55,7 +73,7 @@ There are several options depending on OS:
 
 **Note**: it is recommended to save the X11 configuration, so that after reboot one can just click on the saved configuration to start X11 without going through the configuration steps once again.  
 
-### 3. Clone this repo
+#### 2.4 Clone this repo
 
 ```shell
 git clone https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university.git
@@ -63,7 +81,7 @@ git clone https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university.
 
 or download a ZIP archive (click [here](https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university/archive/refs/heads/master.zip)).
 
-### 3. Build Docker image
+#### 2.5 Build Docker image
 
 Build it from source:
 ```shell
@@ -77,19 +95,7 @@ or pull it from the Docker Hub:
 docker pull chupakabra1996/orb-slam2
 ```
 
-### 4. Download datasets
-
-Datasets can be downloaded [here](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets).
-
-In this workshop we will use [`Vicon Room 1 01`](http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.bag) and [`Machine Hall 01`](http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/V1_01_easy.bag) ROS bag files.
-
-Put the downloaded ROS bag files inside the `datasets` folder.
-
-After this step there should be 2 files: `datasets/MH_01_easy.bag` and  `datasets/V1_01_easy.bag`
-
-**Note**: I will bring a USB flash drive with ROS bag files.
-
-### 5. Run Docker container
+#### 2.6 Run Docker container
 
 **Note**: set the `DISPLAY` env variables correctly beforehand. 
 
@@ -105,7 +111,9 @@ chmod +x docker/run_docker.sh
 ./docker/run_docker.sh
 ```
 
-### 6. Run ORB-SLAM2
+## 3. Run ORB-SLAM2
+
+Put ROS bag files into `datasets` directory.
 
 **Note**: all the following instructions are executed inside the Docker container.
 
