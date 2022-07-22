@@ -24,7 +24,7 @@ Choose your OS and follow the instructions:
 - Mac OS: https://docs.docker.com/desktop/install/mac-install
 - Windows: https://docs.docker.com/desktop/install/windows-install
 
-Go to Docker settings and enable WSL2 backend (see below).
+Go to Docker settings and enable WSL2 backend (ONLY for Windows, see below).
 
 <p align="center">
   <img align="center" src="images/Docker WSL2 backend.png" width="75%">
