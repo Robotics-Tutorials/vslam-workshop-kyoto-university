@@ -15,6 +15,8 @@ xhost +local:docker
 _CONTAINER_NAME="ros-orb-slam2"
 _PWD=`echo ${PWD} | sed 's/\/docker//'`
 
+echo "Starting Docker container ..."
+
 docker run --rm -it --privileged --net=host \
 	--name ${_CONTAINER_NAME} \
 	-e QT_X11_NO_MITSHM=1 -e DISPLAY=${DISPLAY} \
@@ -22,4 +24,4 @@ docker run --rm -it --privileged --net=host \
 	--volume="${_PWD}/datasets:/home/datasets" \
 	--volume="${_PWD}/ros_workspace:/home/ros_workspace" \
   	--group-add video \
-	ros/orb-slam2
+	chupakabra1996/orb-slam2
