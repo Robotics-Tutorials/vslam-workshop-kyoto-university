@@ -89,7 +89,9 @@ After this step there should be 2 files: `datasets/MH_01_easy.bag` and  `dataset
 
 ### 5. Run Docker container
 
-**Note**: set the `DISPLAY` env variables correctly beforehand. The script sets `DISPLAY` if it's missing, but it could be an incorrect value.
+**Note**: set the `DISPLAY` env variables correctly beforehand. 
+
+The script sets `DISPLAY` if it's missing, but it could be set to an incorrect value.
 
 `DISPLAY` should be a value of format `x.x.x.x:y` where `x.x.x.x` - IP address of the Host, `y` - display number (by default: 0).
 
