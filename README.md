@@ -63,7 +63,7 @@ git clone https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university.
 
 or download a ZIP archive (click [here](https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university/archive/refs/heads/master.zip)).
 
-### 3. Docker image
+### 3. Build Docker image
 
 Build it from source:
 ```shell
@@ -77,7 +77,7 @@ or pull it from the Docker Hub:
 docker pull chupakabra1996/orb-slam2
 ```
 
-### 4. Prepare datasets
+### 4. Download datasets
 
 Datasets can be downloaded [here](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets).
 
@@ -87,13 +87,7 @@ Put the downloaded ROS bag files inside the `datasets` folder.
 
 After this step there should be 2 files: `datasets/MH_01_easy.bag` and  `datasets/V1_01_easy.bag`
 
-### 5. Run SLAM
-
-Run the Docker container:
-```shell
-chmod +x docker/run_docker.sh
-./docker/run_docker.sh
-```
+### 5. Run Docker container
 
 **Note**: set the `DISPLAY` env variables correctly beforehand. The script sets `DISPLAY` if it's missing, but it could be an incorrect value.
 
@@ -101,7 +95,15 @@ chmod +x docker/run_docker.sh
 
 **Example** (setting env variable in the terminal): `export DISPLAY=192.168.0.3:0`.
 
-**THE FOLLOWING INSTRUCTIONS SHOULD BE DONE INSIDE THE CONTAINER!!!**
+Run the Docker container:
+```shell
+chmod +x docker/run_docker.sh
+./docker/run_docker.sh
+```
+
+### 6. Run ORB-SLAM2
+
+**Note**: all the following instructions are executed inside the Docker container.
 
 Reindex all the ROS bag files:
 ```shell
