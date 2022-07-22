@@ -87,6 +87,8 @@ Put the downloaded ROS bag files inside the `datasets` folder.
 
 After this step there should be 2 files: `datasets/MH_01_easy.bag` and  `datasets/V1_01_easy.bag`
 
+**Note**: I will bring a USB flash drive with ROS bag files.
+
 ### 5. Run Docker container
 
 **Note**: set the `DISPLAY` env variables correctly beforehand. 
