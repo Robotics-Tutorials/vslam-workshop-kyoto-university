@@ -18,13 +18,10 @@ Download and install Virtual Box ([link](https://www.virtualbox.org/wiki/Downloa
 
 Use the prepared VM image (download it [here](https://drive.google.com/drive/folders/1CHj3sL1I33OKXsCB-aTuXJNJo4xopvsi?usp=sharing)).
 
+Import the image by following "File" > "Import Appliance".
+
 Username: `robot`<br>
 Password: `hidetoshi`
-
-Clone the repo:
-```shell
-git clone https://github.com/Robotics-Tutorials/vslam-workshop-kyoto-university.git
-```
 
 Now you are ready to move to step 3 - Run ORB-SLAM2.
 
